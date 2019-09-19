@@ -69,6 +69,7 @@ var retrieveAllListings = function() {
    */
 
   var output = Listing.find(function(err, listing){
+    if (err) throw err;
     console.log('\nretrieveAllListings()');
     //console.log(JSON.stringify(listing, null, 1));
     listing.forEach(function(listing) {
